@@ -11,3 +11,7 @@ let startButton = document.querySelector('#start');
 let submitButton = document.querySelector('#submit');
 let initialElement = document.querySelector('#initials');
 let feedbackElement = document.querySelector('#feedback');
+
+//sound
+let sfxCorrect = new Audio("assets/sfx/correct.wav");
+let sfxIncorrect = new Audio("assets/sfx/incorrect.wav");
