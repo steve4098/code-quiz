@@ -39,7 +39,7 @@ function startQuiz(){
             timerElement.textContent = timer + ' second remaining';
             timer--;
         } else {
-            timerElement.textContent = " ";
+            timerElement.textContent = "Time's up!";
             clearInterval(timerID);
             endQuiz();
         }
