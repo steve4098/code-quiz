@@ -17,4 +17,12 @@ let questions = [
         "title":"What does HTML stand for?",
         "choices": ["Hypertext Meta Language", "Hypertext Markup Language", "Hypertext Multi Links", "Hypertext Machine Loader"]
     },
+    {
+        "title": "String values must be enclosed with _____:",
+        "choices": ["parentheses", "curly brackets", "quotes", "back ticks"]
+    },
+    {
+        "title": "A very useful tool used during development and debugging for printing content to the debugger is:",
+        "choices": ["JavaScript", "terminal/bash", "for loops", "console.log"]
+    }
 ]
