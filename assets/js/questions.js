@@ -9,5 +9,12 @@ let questions = [
         "title": "If/else statements are enclosed with which punctuation:",
         "choices": ["quotes", "curly brackets", "square brackets", "parentheses"]
     },
-    
+    {
+        "title": "In JavaScript, arrays can be used to store ______:",
+        "choices": ["numbers", "strings", "other arrays", "all of the above"]
+    },
+    {
+        "title":"What does HTML stand for?",
+        "choices": ["Hypertext Meta Language", "Hypertext Markup Language", "Hypertext Multi Links", "Hypertext Machine Loader"]
+    },
 ]
