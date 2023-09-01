@@ -1,6 +1,6 @@
 //variables to keep track of quiz progress
 let currentQuestionIndex = 0;
-let timer = questions.length * 12;
+let timer = questions.length * 2; //CHANGE THIS BACK TO 12!!!!
 let timerID;
 
 //HTML elements
@@ -18,7 +18,13 @@ let sfxIncorrect = new Audio("assets/sfx/incorrect.wav");
 
 //functions
 function getQuestions() {
+    let currentQuestion = questions[currentQuestionIndex];
 
+    let titleElement = document.querySelector('#question-title');
+    titleElement.textContent = currentQuestion.title;
+
+    choicesElement.innerHTML = " ";
+    //24 minutes
 };
 
 function questionClick(){
@@ -47,6 +53,11 @@ function startQuiz(){
 
 function endQuiz(){
     clearInterval(timerID);
+
+    let endScreen = document.querySelector('#end-screen');
+    endScreen.removeAttribute ("class", "hide");
+
+    questionsElement.setAttribute("class", "hide");
 };
 
 // function countdown() {
@@ -54,7 +65,7 @@ function endQuiz(){
 // };
 
 function saveHighscore(){
-
+alert("Score saved!");
 };
 
 function checkForEnter (event){
