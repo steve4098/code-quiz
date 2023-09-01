@@ -40,19 +40,18 @@ function startQuiz(){
             timer--;
         } else {
             timerElement.textContent = "Time's up!";
-            clearInterval(timerID);
             endQuiz();
         }
     }, 1000);
 };
 
 function endQuiz(){
-
+    clearInterval(timerID);
 };
 
-function countdown() {
+// function countdown() {
 
-};
+// };
 
 function saveHighscore(){
 
