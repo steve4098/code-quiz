@@ -26,8 +26,24 @@ function questionClick(){
 };
 
 function startQuiz(){
-    let startScreenElement = document.querySelector('#start-screen');
-    startScreenElement.setAttribute ("class", "hide");
+    let startScreen = document.querySelector('#start-screen');
+    startScreen.setAttribute ("class", "hide");
+
+    questionsElement.removeAttribute("class");
+
+    timerID = setInterval(function(){
+        if (timer > 1) {
+            timerElement.textContent = timer + ' seconds remaining';
+            timer--;
+        } else if (timer ===1){
+            timerElement.textContent = timer + ' second remaining';
+            timer--;
+        } else {
+            timerElement.textContent = " ";
+            clearInterval(timerID);
+            endQuiz();
+        }
+    }, 1000);
 };
 
 function endQuiz(){
