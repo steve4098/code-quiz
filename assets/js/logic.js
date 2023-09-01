@@ -22,11 +22,12 @@ function getQuestions() {
 };
 
 function questionClick(){
-
+//choice.addEventListener("click", questionClick);
 };
 
 function startQuiz(){
-
+    let startScreenElement = document.querySelector('#start-screen');
+    startScreenElement.setAttribute ("class", "hide");
 };
 
 function endQuiz(){
@@ -47,7 +48,11 @@ function checkForEnter (event){
 
 
 startButton.addEventListener("click", startQuiz);
+
 submitButton.addEventListener("click", saveHighscore);
-//choice.addEventListener("click", questionClick);
+
+initialElement.addEventListener("keyup", checkForEnter);
+
+
 
 
