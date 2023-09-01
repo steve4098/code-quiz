@@ -15,3 +15,34 @@ let feedbackElement = document.querySelector('#feedback');
 //sound
 let sfxCorrect = new Audio("assets/sfx/correct.wav");
 let sfxIncorrect = new Audio("assets/sfx/incorrect.wav");
+
+//functions
+function getQuestions() {
+
+};
+
+function questionClick(){
+
+};
+
+function startQuiz(){
+
+};
+
+function endQuiz(){
+
+};
+
+function countdown() {
+
+};
+
+function saveHighscore(){
+
+};
+
+function checkForEnter (event){
+
+};
+
+
