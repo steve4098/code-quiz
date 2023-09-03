@@ -120,6 +120,16 @@ else if (initials.length === 0) {
 
 else {
     alert("Score saved!")
+    let highScore = JSON.parse(localStorage.getItem("highscores") || [])
+    let newScore = {
+        name: initials,
+        score: timer
+    }
+
+    highScore.push(newScore);
+    localStorage.setItem("highscores", JSON.stringify(highScore));
+
+    window.localStorage.href = "highscores.html";
 }
 };
 
