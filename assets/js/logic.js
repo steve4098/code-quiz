@@ -1,6 +1,6 @@
 //variables to keep track of quiz progress
 let currentQuestionIndex = 0;
-let timer = questions.length * 2; //CHANGE THIS BACK TO 12!!!!
+let timer = questions.length * 52; //CHANGE THIS BACK TO 12!!!!
 let timerID;
 
 //HTML elements
@@ -37,7 +37,7 @@ function getQuestions() {
 
         choicesElement.appendChild(answerButton);
 
-        // return;
+        return;
     })
 };
 
@@ -66,6 +66,8 @@ function questionClick(){
 
     if (currentQuestionIndex === questions.length) {
         endQuiz();
+    } else {
+        getQuestions();
     }
 
 };
