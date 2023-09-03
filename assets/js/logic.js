@@ -1,6 +1,6 @@
 //variables to keep track of quiz progress
 let currentQuestionIndex = 0;
-let timer = questions.length * 2; //CHANGE THIS BACK TO 12!!!!
+let timer = questions.length * 12;
 let timerID;
 
 //HTML elements
@@ -49,7 +49,7 @@ function questionClick(){
         feedbackElement.textContent = "Correct!";
         sfxCorrect.play();
     } else {
-        timer -= 5;
+        timer -= 10;
         if(timer<0){
             timer = 0;
         }

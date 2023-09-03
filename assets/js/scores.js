@@ -1,5 +1,3 @@
-let scoresList = document.querySelector('#highscores');
-
 function displayHighScores() {
     let highScores = JSON.parse(localStorage.getItem("highscores"));
 
@@ -16,9 +14,10 @@ function displayHighScores() {
     })
 
 }
-// scoresList.push(highScores);
 
 function clearScores () {
+    localStorage.removeItem("highscores");
+    window.location.reload;
 
 }
 
