@@ -120,7 +120,7 @@ else if (initials.length === 0) {
 
 else {
     alert("Score saved!")
-    let highScore = JSON.parse(localStorage.getItem("highscores") || [])
+    let highScore = JSON.parse(localStorage.getItem("highscores")) || []
     let newScore = {
         name: initials,
         score: timer
@@ -134,7 +134,9 @@ else {
 };
 
 function checkForEnter (event){
-
+    if (event.key === "Enter") {
+        saveHighscore();
+    }
 };
 
 
