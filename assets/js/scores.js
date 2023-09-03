@@ -17,7 +17,7 @@ function displayHighScores() {
 
 function clearScores () {
     localStorage.removeItem("highscores");
-    window.location.reload;
+    window.location.reload();
 
 }
 
