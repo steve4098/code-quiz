@@ -42,7 +42,19 @@ function getQuestions() {
 getQuestions();
 
 function questionClick(){
-//choice.addEventListener("click", questionClick);
+   
+    if (this.value === questions[currentQuestionIndex].answer) {
+        feedbackElement.textContent = "Correct!";
+        sfxCorrect.play();
+    } else {
+        timer -= 5;
+        if(timer<0){
+            timer = 0;
+        }
+        feedbackElement.textContent = "Wrong!";
+        sfxIncorrect.play();
+    };
+
 };
 
 function startQuiz(){
