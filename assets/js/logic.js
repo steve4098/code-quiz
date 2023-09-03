@@ -24,8 +24,22 @@ function getQuestions() {
     titleElement.textContent = currentQuestion.title;
 
     choicesElement.innerHTML = " ";
-    //24 minutes
+    
+    currentQuestion.choices.forEach(function(choice, index){
+        
+        let answerButton = document.createElement("button");
+        answerButton.setAttribute("class", "choice");
+        answerButton.setAttribute("value", choice);
+
+        answerButton.textContent = `${index + 1})  ${choice}`;
+
+        answerButton.addEventListener("click", questionClick);
+
+        choicesElement.appendChild(answerButton);
+    })
 };
+
+getQuestions();
 
 function questionClick(){
 //choice.addEventListener("click", questionClick);
