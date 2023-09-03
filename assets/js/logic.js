@@ -1,6 +1,6 @@
 //variables to keep track of quiz progress
 let currentQuestionIndex = 0;
-let timer = questions.length * 52; //CHANGE THIS BACK TO 12!!!!
+let timer = questions.length * 2; //CHANGE THIS BACK TO 12!!!!
 let timerID;
 
 //HTML elements
@@ -103,7 +103,24 @@ function endQuiz(){
 
 
 function saveHighscore(){
-alert("Score saved!");
+
+let initials = initialElement.value.trim();
+
+if (initials.length > 3) {
+    alert("No more than 3 initials")
+}
+
+else if (initials.length === 0) {
+    alert("Please enter up to 3 initials")
+}
+
+// else if (character.isLetter(initials) === false) {
+//     alert("Initials must be letters")
+// }
+
+else {
+    alert("Score saved!")
+}
 };
 
 function checkForEnter (event){
