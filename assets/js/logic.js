@@ -122,8 +122,8 @@ else {
     alert("Score saved!")
     let highScore = JSON.parse(localStorage.getItem("highscores")) || []
     let newScore = {
-        name: initials,
-        score: timer
+        score: timer,
+        name: initials
     }
 
     highScore.push(newScore);
