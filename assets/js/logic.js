@@ -36,6 +36,8 @@ function getQuestions() {
         answerButton.addEventListener("click", questionClick);
 
         choicesElement.appendChild(answerButton);
+
+        // return;
     })
 };
 
@@ -54,6 +56,17 @@ function questionClick(){
         feedbackElement.textContent = "Wrong!";
         sfxIncorrect.play();
     };
+
+    feedbackElement.setAttribute("class", "feedback");
+
+    setTimeout(function(){
+        feedbackElement.setAttribute("class", "feedback hide")}, 900);
+
+    currentQuestionIndex++;
+
+    if (currentQuestionIndex === questions.length) {
+        endQuiz();
+    }
 
 };
 
@@ -86,9 +99,6 @@ function endQuiz(){
     questionsElement.setAttribute("class", "hide");
 };
 
-// function countdown() {
-
-// };
 
 function saveHighscore(){
 alert("Score saved!");
